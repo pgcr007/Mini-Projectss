@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker javascript Project</title>
+    <link rel="stylesheet" href="./exp.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <button id="toggle-theme">Toggle Dark Mode</button>
+        
+        <form id="expense-from">
+            <input type="text" id="exp-name" placeholder="Expense Name" required>
+            <input type="number" id="exp-amount" placeholder="exp-amount" required>
+            <select id="exp-cat">
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="shopping">Shopping</option>
+                <option value="other">Others</option>
+            </select>
+            <button type="submit">Add Expenses</button>
+        </form>
+
+        <div>
+    <label for="filter-cat">Filter by Category:</label>
+    <select id="filter-cat">
+        <option value="all">All</option>
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="shopping">Shopping</option>
+        <option value="other">Others</option>
+    </select>
+    </div>
+
+    <h2>Total:Rs<span id="total-amt">0</span></h2>
+
+    <button id="export-csv">Export To CSV</button>
+
+    <h3>Expense Summary</h3>
+    <ul id="exp-sum"></ul>
+
+    <ul id="exp-list"></ul>
+    </div>
+
+    <script src="./exp.js
+"></script>
+</body>
+</html>

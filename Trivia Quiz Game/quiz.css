@@ -1,0 +1,114 @@
+*{
+    font-family:fantasy;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:linear-gradient(135deg,#667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conatiner{
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0 ,0 ,0.2);
+    width: 90%;
+    max-width: 600px;
+
+}
+
+.screen{
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
+h1{
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+select{
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5rem;
+    width: 200px;
+}
+
+button{
+    padding: 0.8rem 1.5rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover{
+    background: #5a6cd6;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.question{
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.choices{
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.choices button{
+    padding: 1rem;
+    background: #f0f0f0;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.choices button:hover{
+    background: #e0e0e0;
+}
+
+.choices button.correct{
+    background: #4caf50;
+    color: white;
+}
+
+.choices button.wrong{
+    background: #f44336;
+    color: white;
+}
+
+.loader{
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #667eea;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}

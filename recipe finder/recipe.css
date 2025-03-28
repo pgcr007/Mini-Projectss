@@ -1,0 +1,90 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0,0, 0.1);
+}
+
+h1{
+    color: #28a745;
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0 ;
+}
+
+input, select{
+    padding: 10px;
+    border:  1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button{
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+   cursor: pointer;
+}
+
+button:hover{
+    background: #218838;
+    transition: tranform 0.3s color 0.3s;
+    transform: scale(1.05);
+}
+
+.loading{
+    display: none;
+    color: #555;
+    margin: 10px 0;
+}
+
+.recipe, .favorite{
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0,0, 0.1);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recipe img, .favorite img{
+    width: 100px;
+    border-radius: 5px;
+}
+
+.recipe a, .favorite a{
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.favorite-btn{
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.favorite-btn:hover{
+    background: #cc0000;
+}

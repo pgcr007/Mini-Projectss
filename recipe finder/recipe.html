@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="./recipe.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Finder</h1>
+        <p>Find the best recipe based on the ingredients you have!</p>
+
+        <!--Search Bar Filters-->
+        <div class="search-box">
+            <input type="text"  id="ing-input" placeholder="Enter ingredients(e.g., Chciken,garlic)">
+            <select id="dietfilter">
+                <option value="">Any Diet</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="ketogenci">Keto</option>
+                <option value="paleo">Paleo</option>
+            </select>
+
+            <select id="healthfilter">
+                <option value="">Any Helath Prefrences</option>
+                <option value="gluten-free">Gluten-Free</option>
+                <option value="dairy-free">Dairy-Free</option>
+                <option value="low-carb">Low-Carb</option>
+            </select>
+            <button onclick="fetchrecipe()">🔍 Search</button>
+
+        </div>
+
+        <div id="loading" class="loading">Loading Recipes...</div>
+
+        <h2>Recipes</h2>
+        <div id="recipe-list"></div>
+
+        <h2>Favourite Recipes</h2>
+        <div id="favoriteslist"></div>
+
+    </div>
+    <script src="./recipe.js"></script>
+</body>
+</html>

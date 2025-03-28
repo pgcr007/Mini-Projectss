@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz</title>
+    <link rel="stylesheet" href="./quiz.css">
+</head>
+<body>
+    <div class="conatiner">
+        <div class="screen" id="start-screen">
+            <h1>Trivia Master</h1>
+            <select id="category">
+                <option value="9">General Knowledge</option>
+                <option value="21">Sports</option>
+                <option value="23">History</option>
+                <option value="17">Science</option>
+            </select>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div class="header">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="timer">Time: <span id="timer">30</span>s</div>
+                <div class="question-count">Question <span id="current-qus">1</span>/10</div>
+            </div>
+
+            <div id="question" class="question"></div>
+            <div id="choices" class="choices"></div>
+            <button id="next-btn" class="hidden">Next Question</button>
+        </div>
+
+        <div id="end-screen" class="screen hidden">
+            <h1>Quiz Completed</h1>
+            <p>Your Final Score: <span id="final-score">0</span></p>
+            <button id="restart-btn">Play Again</button>
+        </div>
+
+        <div id="loader" class="loader hidden"></div>
+    </div>
+
+    <script src="./quiz.js"></script>
+</body>
+</html>
