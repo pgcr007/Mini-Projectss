@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="./chat.css">
+</head>
+<body>
+    <div id="chat-conatiner">
+        <div id="room-selection">
+            <h2>Join a room</h2>
+            <select id="room-name">
+                <option value="general">General</option>
+                <option value="tech">Tech</option>
+                <option value="gaming">Gaming</option>
+            </select>
+            <input type="text" id="username" placeholder="Enter your username"> 
+            <button onclick="joinroom()">Join Room</button>
+        </div>
+
+        <div id="chat-room" style="display: none;">
+            <h2>Room: <span id="current-room"></span></h2>
+            <div id="messages"></div>
+            <div id="typing-indicator" style="display: none;">Someone is typing.....</div>
+            <input type="text" id="messages-input" placeholder="Type a message">
+            <div class="button-group">
+                <button onclick="sendmessage()">Send</button>
+                <button onclick="leaveroom()">Leave Room</button>
+            </div>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+    
+</body>
+</html>

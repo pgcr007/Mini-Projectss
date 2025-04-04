@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin:  0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+#chat-conatiner {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow:  0 0 15px rgba(0,0 ,0 ,0.2 );
+    transition: transform 0.3s ease;
+}
+
+#chat-conatiner:hover{
+    transform: scale(1.02);
+}
+
+#room-selection , #chat-room {
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {opacity: 1;}
+}
+
+#messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 5px;
+}
+
+.message {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    opacity: 0;
+    animation: slideIn 0.3s forwards;
+    transition: background 0.2s ease;
+}
+
+.message:hover {
+    filter: brightness(1.1);
+}
+
+@keyframes slideIn {
+    from {transform: translateX(-20px); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+}
+
+.message.sent {
+    background: #d1e7dd;
+    text-align: right;
+}
+
+.message.received {
+    background: #f8d7da;
+    text-align: left;
+}
+
+input, select , button {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease , transform 0.2s ease;
+}
+
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    transform: scale(1.02);
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+#typing-indicator {
+    font-style: italic;
+    color: #666;
+    padding: 5px 0;
+}
+
+@media (max-width: 600px)
+{
+    #chat-conatiner {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    input, select , button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

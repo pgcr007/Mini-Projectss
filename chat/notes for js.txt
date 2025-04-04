@@ -1,0 +1,23 @@
+To enable the real-time communication with the WebSocket server
+ws.onopen = () => {
+        console.log('Connected to WebSocket server');
+    };
+
+ws.onopen is an event handler trigger when the conection to the server is established
+
+
+
+handles the incoming messages form the WebSocket server
+ws.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        if (data.type === 'message') {
+            displayMessage(data.username, data.message, data.username === username);
+        } else if (data.type === 'typing') {
+            showTypingIndicator(data.username !== username);
+        }
+    };
+
+ws.onmessage is an event handler trigger whenever the client recive the message from the server
+
+(event) is a parameter that contains the message data sent by the server
+
