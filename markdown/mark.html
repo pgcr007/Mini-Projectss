@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="./mark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Markdown Editor</h1>
+        <div class="controls">
+            <button id="bold-btn" title="Bold"><i class="fas fa-bold"></i></button>
+            <button id="italic-btn" title="Italic"><i class="fas fa-italic"></i></button>
+            <button id="link-btn" title="Link"><i class="fas fa-link"></i></button>
+            <button id="code-btn" title="Code"><i class="fas fa-code"></i></button>
+            <button id="save-btn" title="Save"><i class="fas fa-save"></i></button>
+            <select id="theme-select">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div class="editor">
+            <textarea id="markdown" placeholder="Start typing markdown here..."></textarea>
+        </div>
+        <div class="preview" id="preview"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="./mark.js"></script>
+</body>
+</html>
