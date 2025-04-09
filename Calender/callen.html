@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender App</title>
+    <link rel="stylesheet" href="./callen.css">
+</head>
+<body>
+    <div class="calender-container">
+        <div class="controls">
+            <div class="view-buttons">
+                <button onclick="showmonthview()">Month</button>
+                <button onclick="showweekview()">Week</button>
+                <button onclick="showdailyview()">Day</button>
+            </div>
+            <div class="event-form">
+                <h3>Add Event</h3>
+                <input type="text" id="eventtitle"  placeholder="Event Title">
+                <input type="date" id="eventdate">
+                <input type="time" id="eventtime">
+                <select id="eventcolor">
+                    <option value="#e3f2fd">Blue</option>
+                    <option value="#ffebee">Red</option>
+                    <option value="#e8f5e9">Green</option>
+                    <option value="#fffee0">Orange</option>
+                </select>
+                <button onclick="addevent()">Add Event</button>
+            </div>
+        </div>
+        <div id="calender"></div>
+    </div>
+    <script src="./callen.js"></script>
+</body>
+</html>
