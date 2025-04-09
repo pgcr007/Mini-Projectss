@@ -1,0 +1,92 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 20px;
+}
+
+.calender-container
+{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.controls
+{
+    margin-bottom: 20px;
+}
+
+.view-buttons button
+{
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+#calender
+{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.month-view
+{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day
+{
+    border: 1px solid #eee;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.week-view
+{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.daily-view {
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.event
+{
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 3px;
+    cursor: move;
+    position: relative;
+}
+
+.event.dragging
+{
+    opacity: 0.5;
+}
+
+.event-buttons
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.event-buttons button
+{
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.event-form
+{
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.event-form select {
+    padding: 5px;
+    margin-right: 10px;
+}
